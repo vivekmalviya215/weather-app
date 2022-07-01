@@ -1,0 +1,45 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Jost', sans-serif;
+}
+
+.dahsboard-header {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+.historial-wether-report{
+  width: 60%;
+ margin-top: 100px;
+margin-left: 20%;
+}
+.card-header{
+  margin-top: 50px;
+}
+.line-chart-style{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+  width: 70%;
+  height: auto;
+}
+.chart-style{
+  margin-top: 100px;
+
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
