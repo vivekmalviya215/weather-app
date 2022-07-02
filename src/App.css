@@ -1,36 +1,78 @@
-*{
+* {
   padding: 0px;
   margin: 0px;
   font-family: 'Jost', sans-serif;
 }
 
 .dahsboard-header {
-  text-align: center;
   width: 80%;
   margin: auto;
 }
-.historial-wether-report{
+
+.historial-wether-report {
   width: 60%;
- margin-top: 100px;
-margin-left: 20%;
+  margin-top: 10px;
+  margin-left: 20%;
 }
-.card-header{
+
+.card-header {
   margin-top: 50px;
 }
-.line-chart-style{
+
+.back-button-section {
+  margin-top: 80px;
+  margin-left: 100px;
+}
+
+.line-chart-style {
   display: flex;
   flex-direction: column;
   padding-bottom: 50px;
   width: 70%;
   height: auto;
 }
-.chart-style{
+
+.location-heading {
+  text-align: center;
   margin-top: 100px;
 
 }
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+.container {
+  margin-top: 80px;
+}
+
+.chart-style {
+  margin-top: 100px;
+
+}
+
+.city-card-style {
+  text-align: center;
+
+
+}
+
+.city-temperature-style {
+  margin-left: 160px;
+  font-style: bold;
+}
+
+.weather-report-button-style {
+  margin-top: 50px;
+  margin-left: 300px;
+}
+
+
+@media (max-width:998px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width:768px) {
+  html {
+    font-size: 45%;
   }
 }
 
@@ -39,6 +81,7 @@ margin-left: 20%;
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
