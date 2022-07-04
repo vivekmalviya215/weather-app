@@ -1,7 +1,8 @@
 
 import axios from "axios";
-export const getWeather = async (city) =>
-  await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_API_KEY}`);
+export const getCityWeather = async (city) =>
+  await axios.get(`${process.env.REACT_APP_WEATHER_API}?q=${city}&units=metric&appid=${process.env.REACT_APP_API_KEY}`);
 
-export const getWeatherDataDaily = async (city) =>
-  await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${process.env.REACT_APP_API_KEY}`);
+
+export const getForecastDataWeekly = async (city) =>
+  await axios.get(`${process.env.REACT_APP_FORECAST_API_WEEKLY}?q=${city}&units=metric&appid=${process.env.REACT_APP_API_KEY}`);

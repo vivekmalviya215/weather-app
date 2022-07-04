@@ -4,64 +4,7 @@
   font-family: 'Jost', sans-serif;
 }
 
-.dahsboard-header {
-  width: 80%;
-  margin: auto;
-}
 
-.historial-wether-report {
-  width: 60%;
-  margin-top: 10px;
-  margin-left: 20%;
-}
-
-.card-header {
-  margin-top: 50px;
-}
-
-.back-button-section {
-  margin-top: 80px;
-  margin-left: 100px;
-}
-
-.line-chart-style {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 50px;
-  width: 70%;
-  height: auto;
-}
-
-.location-heading {
-  text-align: center;
-  margin-top: 100px;
-
-}
-
-.container {
-  margin-top: 80px;
-}
-
-.chart-style {
-  margin-top: 100px;
-
-}
-
-.city-card-style {
-  text-align: center;
-
-
-}
-
-.city-temperature-style {
-  margin-left: 160px;
-  font-style: bold;
-}
-
-.weather-report-button-style {
-  margin-top: 50px;
-  margin-left: 300px;
-}
 
 
 @media (max-width:998px) {

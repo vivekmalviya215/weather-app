@@ -1,32 +1,38 @@
-import * as types from '../actionTypes.js'
+import {
+  FETCH_WEATHER_REPORT_START, FETCH_WEATHER_REPORT_SUCCESS,
+  FETCH_WEATHER_REPORT_ERROR,
+  FETCH_FORECAST_WEEKLY_DATA,
+  FETCH_FORECAST_WEEKLY_DATA_SUCCESS,
+  FETCH_FORECAST_WEEKLY_DATA_ERROR,
+} from '../constants.js'
 
 export const fetchWeatherReport = (query) => ({
-  type: types.FETCH_WEATHER_REPORT_START,
+  type: FETCH_WEATHER_REPORT_START,
   payload: query,
 });
 
 export const fetchWeatherReportSuccess = (city) => ({
-  type: types.FETCH_WEATHER_REPORT_SUCCESS,
+  type: FETCH_WEATHER_REPORT_SUCCESS,
   payload: city,
 });
 
 export const WeatherReportError = (error) => ({
-  type: types.FETCH_WEATHER_REPORT_ERROR,
+  type: FETCH_WEATHER_REPORT_ERROR,
   payload: error,
 });
 
-export const fetchWeatherDailyData = (query) =>
+export const fetchForecastWeeklyData = (query) =>
 ({
-  type: types.FETCH_WEATHER_DAILY_DATA,
+  type: FETCH_FORECAST_WEEKLY_DATA,
   payload: query,
 });
 
-export const fetchWeatherDailyDataSuccess = (data) => ({
-  type: types.FETCH_WEATHER_DAILY_DATA_SUCCESS,
+export const fetchForecastWeeklyDataSuccess = (data) => ({
+  type: FETCH_FORECAST_WEEKLY_DATA_SUCCESS,
   payload: data,
 
 });
-export const WeatherDailyDataError = (error) => ({
-  type: types.FETCH_WEATHER_DAILY_DATA_ERROR,
+export const ForecastWeeklyDataError = (error) => ({
+  type: FETCH_FORECAST_WEEKLY_DATA_ERROR,
   payload: error,
 });

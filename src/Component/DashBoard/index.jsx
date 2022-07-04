@@ -3,11 +3,16 @@ import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchWeatherDailyData, fetchWeatherReport } from '../../redux/action/WeatherAction'
+import { fetchForecastWeeklyData, fetchWeatherReport } from '../../redux/action/WeatherAction'
 import Typography from '@mui/material/Typography';
 import { useNavigate } from 'react-router-dom';
 import CityWeatherDetails from './CityWeatherDetails';
+import { useStyles } from './styles';
+import { Box } from '@mui/system';
+
 function DashBoard() {
+  const classes = useStyles()
+
   const dispathch = useDispatch();
   const [search, setSearch] = useState('indore');
 
@@ -17,21 +22,16 @@ function DashBoard() {
 
   let navigate = useNavigate();
   const showWeatherDetailChart = () => {
-    dispathch(fetchWeatherDailyData(search))
+    dispathch(fetchForecastWeeklyData(search))
     navigate("/weekly-weather-report");
   }
   const cityWeatherData = useSelector((state) => state.weatherReport.weatherData)
   const isLoading = useSelector((state) => state.weatherReport.isLoading)
   const error = useSelector((state) => state.weatherReport.error)
-
   return (
-    <div className='dahsboard-header'>
-      <FormControl sx={{
-        width: '60%',
-        top: 80,
-        left: '20%',
-      }}>
-        <InputLabel htmlFor="component-outlined" style={{ backgroundColor: 'white' }}>Search</InputLabel>
+    <Box>
+      <FormControl className={classes.searchFieldStyle}>
+        <InputLabel htmlFor="component-outlined" className={classes.searchLabelStyle}>Search</InputLabel>
         <OutlinedInput
           id="component-outlined"
           onChange={(e) => { setSearch(e.target.value) }}
@@ -39,16 +39,23 @@ function DashBoard() {
         />
       </FormControl>
       {
-        isLoading ? (<Typography style={{ marginTop: '9.3rem', textAlign: 'center' }} variant="h5" gutterBottom component="div">Please Wait Loading ...</Typography>) :
+        isLoading ? (
+          <Box className={classes.responseStatusStyle}>
+            <Typography variant="h5" component="div" >
+              Please Wait Loading ...</Typography>
+          </Box>
+        )
+          :
           error ?
-            <>
-              <Typography style={{ marginTop: '9.3rem', textAlign: 'center ' }} variant="h5" gutterBottom component="div"> {error.message}</Typography>
-            </>
+            <Box className={classes.errorMsgStyle}>
+              <Typography variant="h5" component="div" > {error.message}</Typography>
+            </Box>
+
             : (
               <CityWeatherDetails showWeatherDetailChart={showWeatherDetailChart} cityWeatherData={cityWeatherData} />
             )
       }
-    </div>
+    </Box>
   );
 }
 export default DashBoard;
