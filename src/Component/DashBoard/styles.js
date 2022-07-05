@@ -14,11 +14,11 @@ export const useStyles = makeStyles({
     backgroundColor: 'white'
   },
   responseStatusStyle: {
-    marginTop: '90px',
+    marginTop: '5.62rem',
     textAlign: 'center',
   },
   errorMsgStyle: {
-    marginTop: '90px',
+    marginTop: '5.62rem',
     textAlign: 'center',
   },
 });
@@ -36,32 +36,30 @@ export const cityPageStyles = makeStyles({
   },
   locationHeading: {
     textAlign: 'center',
-    marginTop: '100px',
+    marginTop: '6.25rem',
   },
   cardStyle: {
-    backgroundColor: '#bbdefb',
-    width: '60%',
-    marginLeft: '20%',
-    marginTop: '30px'
+    width: '50%',
+    marginLeft: '25%',
+    marginTop: '1.9rem'
   },
   cityCardStyle: {
     textAlign: 'center'
   },
   weatherIcon: {
-    height: '120px',
-    width: '120px',
+    height: '7.5rem',
+    width: '7.5rem',
   },
   cityTemperatureStyle: {
-    marginLeft: '160px',
+    marginLeft: '10rem',
   },
   minTempStyle: {
-    marginLeft: '250px'
-  },
-  maxTempStyle: {
-    marginLeft: '245px'
+    marginLeft: '15.6rem'
+  }, maxTempStyle: {
+    marginLeft: '15.3rem'
   },
   windSpeedStyle: {
-    marginLeft: '340px'
+    marginLeft: '21.2rem'
   },
   Button: {
     backgroundColor: '#2196f3'
